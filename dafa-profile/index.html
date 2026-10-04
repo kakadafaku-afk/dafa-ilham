@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pribadi | M. Dafa Ilham Alfatih</title>
-    <!-- Google Fonts untuk tipografi yang modern -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Menghubungkan ke file CSS eksternal -->
+    <!-- CSS External -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,20 +14,18 @@
     <!-- Header & Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <!-- Logo Personal -->
-            <a href="#" class="logo">Dafa ilham<span>.</span></a>
+            <a href="#" class="logo">dafailham<span>.</span></a>
             
-            <!-- Menu Navigasi -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#tentang-saya">Tentang Saya</a></li>
                     <li><a href="#keahlian">Keahlian</a></li>
+                    <li><a href="#fotografi">Fotografi</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </nav>
 
-            <!-- Tombol Toggle Dark/Light Mode -->
             <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
                 <span class="icon">🌙</span>
             </button>
@@ -39,11 +37,12 @@
         <div class="container hero-content">
             <p class="greeting">Halo, selamat datang! Saya</p>
             <h1 class="name">Muhammad Dafa Ilham Alfatih</h1>
-            <!-- Area untuk efek ketik otomatis -->
-            <h2 class="typing-container">
-                Saya seorang <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+            
+            <h2 class="role-title">
+                Saya seorang <span class="highlight">Mahasiswa PTIK & Data Enthusiast</span>
             </h2>
-            <p class="hero-desc">Mahasiswa PTIK yang berdedikasi dan memiliki minat mendalam di bidang pengolahan data.</p>
+            
+            <p class="hero-desc">Mahasiswa Pendidikan Teknik Informatika dan Komputer yang memiliki minat mendalam di bidang pengolahan data serta dokumentasi visual dan fotografi.</p>
             <a href="#tentang-saya" class="btn btn-primary">Kenali Saya Lebih Lanjut</a>
         </div>
     </section>
@@ -53,7 +52,6 @@
         <div class="container">
             <h2 class="section-title">Tentang Saya</h2>
             <div class="about-grid">
-                <!-- Kartu Informasi Profil -->
                 <div class="card profile-card">
                     <h3>Data Diri</h3>
                     <ul>
@@ -66,8 +64,8 @@
                 <div class="card highlight-card">
                     <h3>Personal Interest</h3>
                     <ul>
-                        <li><strong>Hobi / Kesibukan:</strong> Badminton 🏸 - Menjaga kebugaran dan fokus melalui olahraga.</li>
-                        <li><strong>Cita-cita:</strong> Menjadi Orang Sukses - Menginspirasi dan memberikan dampak positif di industri teknologi, khususnya di bidang data.</li>
+                        <li><strong>Hobi & Minat:</strong> Badminton 🏸 & Fotografi / Videografi 📷</li>
+                        <li><strong>Cita-cita:</strong> Menjadi Orang Sukses - Memberikan dampak positif di industri teknologi, khususnya di bidang data dan karya visual.</li>
                     </ul>
                 </div>
             </div>
@@ -105,23 +103,76 @@
         </div>
     </section>
 
+    <!-- Photography Section -->
+    <section id="fotografi" class="photography-section">
+        <div class="container">
+            <h2 class="section-title">Galeri Fotografi</h2>
+            <p class="section-intro">Di luar kegiatan akademik, saya menyukai bidang fotografi.</p>
+            <div class="gallery-grid">
+                <!-- Foto Item 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="E:\website\dafa-profile\images\foto-tradisi.jpeg" alt="Harmoni Tradisi" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span>🔍 Perbesar Foto</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Harmoni Tradisi & Lingkungan</h3>
+                        <p class="gallery-tag">Dokumentasi Budaya & Lingkungan</p>
+                    </div>
+                </div>
+
+                <!-- Foto Item 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="E:\website\dafa-profile\images\foto-lanskap.jpg" alt="Lanskap Pesisir" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span>🔍 Perbesar Foto</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Lanskap & Keindahan Alam</h3>
+                        <p class="gallery-tag">Landscape Photography</p>
+                    </div>
+                </div>
+
+                <!-- Foto Item 3 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="E:\website\dafa-profile\images\foto-arsitektur.jpg" alt="Seni Arsitektur" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span>🔍 Perbesar Foto</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Eksplorasi Arsitektur</h3>
+                        <p class="gallery-tag">Human Interest & Street</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Lightbox Pembesar Foto -->
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged photo">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <!-- Footer -->
     <footer id="kontak" class="footer">
         <div class="container footer-content">
             <div class="contact-info">
                 <h2>Mari Berdiskusi</h2>
-                <p>Email: <a href="mailto:dafa.alfatih@example.com">dafa.alfatih@example.com</a></p>
-                <div class="social-links">
-                    <a href="#" class="social-btn">LinkedIn</a>
-                    <a href="#" class="social-btn">GitHub</a>
-                    <a href="#" class="social-btn">Instagram</a>
-                </div>
+                <p>Email: <a href="mailto:kakadafaku@gmai.com">kakadafaku@gmai.com</a></p>
+                <p>Nomor HP: <a href="tel:082326244433">082326244433</a></p>
             </div>
-            <p class="copyright">&copy; 2026 Muhammad Dafa Ilham Alfatih. PTIK 2025.</p>
+            <p class="copyright">&copy; 2026 Muhammad Dafa Ilham Alfatih.</p>
         </div>
     </footer>
 
-    <!-- Menghubungkan ke file JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

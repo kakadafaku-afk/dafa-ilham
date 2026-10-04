@@ -106,3 +106,35 @@ navLinks.forEach(link => {
         }
     });
 });
+/**
+ * Fitur Lightbox / Pembesar Foto Galeri
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox-modal");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+
+    galleryCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const img = card.querySelector(".gallery-img");
+            const title = card.querySelector(".gallery-info h3").textContent;
+            
+            lightbox.style.display = "block";
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = title;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    // Menutup lightbox saat mengklik area di luar gambar
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
